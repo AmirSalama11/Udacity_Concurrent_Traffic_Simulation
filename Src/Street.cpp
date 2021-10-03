@@ -21,3 +21,4 @@ void Street::setOutIntersection(std::shared_ptr<Intersection> out)
     _interOut = out;
     out->addStreet(get_shared_this()); // add this street to list of streets connected to the intersection
 }
+
