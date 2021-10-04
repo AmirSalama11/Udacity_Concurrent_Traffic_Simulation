@@ -86,10 +86,10 @@ void TrafficLight::cycleThroughPhases()
           }
           
           TrafficLight::TrLightQueue.send(std::move(_currentPhase));
+		  
+		  // reset stop watch for next cycle
+          lastUpdate = std::chrono::system_clock::now();
         }
-      
-        // reset stop watch for next cycle
-        lastUpdate = std::chrono::system_clock::now();
     }
 }
 
